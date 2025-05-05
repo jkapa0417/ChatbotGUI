@@ -7,7 +7,7 @@
   "sub_suffix": "Full Stack Developer",
   "subintro_prefix": "I am working on full-stack development that encompasses",
   "tech_stack": "frontend, backend, cloud infrastructure, and data",
-  "subintro_suffix": "utilizing a diverse tech stack.",
+  "subintro_suffix": " ,utilizing a diverse tech stack.",
   "conclusion": "With top-tier skills and passion, I am looking for a company or project where I can grow and thrive together.",
   "view_project": "View Project",
   "no_demo": "Demo not available due to company policy",
@@ -22,6 +22,6 @@
   "skills": "Skills",
   "about_me": "About Me",
   "contact_us": "Contact",
-  "developed": "Worklog",
+  "developed": "Development",
   "process": "Process"
 }
