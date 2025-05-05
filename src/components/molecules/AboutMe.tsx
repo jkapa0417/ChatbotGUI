@@ -13,15 +13,13 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ messages = [] }) => {
   return (
-    <div className="flex flex-col p-4">
-      <SectionHeader title="About Me"/>
-      <div className="flex mt-4 gap-4 flex-wrap justify-center md:justify-start">
+    <div className="flex flex-col">
+      <SectionHeader title="About Me" />
+      <div className="flex gap-4 flex-wrap justify-center md:justify-start">
         {messages.map((item, index) => (
           <Card key={index}>
-            <h2 className="text-xl font-semibold mb-4 text-gray-800 pl-12">{item.question}</h2>
-            <p
-              className="text-gray-600 pl-12"
-            >
+            <h2 className="text-xl font-semibold mb-4">{item.question}</h2>
+            <p>
               {item.answer}
             </p>
           </Card>

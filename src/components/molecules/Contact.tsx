@@ -11,18 +11,18 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ messages }) => {
   return (
-    <div className="flex flex-col p-4 items-center md:items-start">
+    <div className="flex flex-col items-center md:items-start">
       <SectionHeader title="Contact" />
       <Card key={'contact'}>
-        <div className="flex flex-col items-center p-12">
-          <p className="text-xl text-gray-800 mb-4 text-center">
+        <div className="flex flex-col items-start">
+          <p className="text-xl mb-4 text-black text-start">
             I’m always excited to connect! Whether it's about potential collaborations, job opportunities, or just a chat about projects, feel free to drop a line via email:
           </p>
-          <p className="text-lg text-blue-600 mb-6 font-bold transition duration-200 ease-in-out hover:text-blue-800">
+          <p className="text-lg text-black mb-6 font-bold transition duration-200 ease-in-out hover:text-gray-800 cursor-default">
             {messages?.email}
           </p>
           <button
-            className="bg-blue-500 text-white px-6 py-3 font-semibold rounded-full shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105"
+            className="bg-white text-black px-6 py-3 font-semibold rounded-md hover:bg-[#07B53B] hover:text-white transition duration-300 transform hover:scale-105 cursor-pointer"
             onClick={() => (window.location.href = `mailto:${messages?.email}`)}
           >
             Send Email
