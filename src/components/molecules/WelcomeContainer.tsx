@@ -1,10 +1,11 @@
-
+import {useState} from 'react'
 import ProfileImage from "@assets/profile_image.jpg";
 import CodeIcon from "@assets/code.svg?react";
 import CloudIcon from "@assets/cloud.svg?react";
 import ChatIcon from "@assets/chat.svg?react";
 
 const WelcomeMessageContainer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div
@@ -15,14 +16,13 @@ const WelcomeMessageContainer = () => {
         borderRadius: '10px',
       }}
     >
-      <div
-        className={`flex flex-col h-full`}
-      >
+      <div className={`flex flex-col h-full`}>
         <div className="flex items-center space-x-4 mb-4 border-b pb-4">
           <img
-            className="rounded-full w-20 h-20 border-4 border-gray-400"
+            className="rounded-full w-20 h-20 border-4 border-gray-400 cursor-pointer"
             src={ProfileImage}
             alt="Profile of Jun Ki Ahn"
+            onClick={() => setIsModalOpen(true)}
           />
           <div>
             <h1 className="text-lg sm:text-2xl font-extrabold text-gray-800">Jun Ki Ahn</h1>
@@ -50,6 +50,25 @@ const WelcomeMessageContainer = () => {
           <ChatIcon className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" title="Chatbot Development" />
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 backdrop-blur-md flex justify-center items-center z-50">
+          <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-2">
+            <img
+              className="w-full h-auto rounded-lg cursor-pointer"
+              src={ProfileImage}
+              alt="Profile of Jun Ki Ahn"
+              onClick={() => setIsModalOpen(false)}
+            />
+            <button
+              className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg w-full"
+              onClick={() => setIsModalOpen(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

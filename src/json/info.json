@@ -1,0 +1,225 @@
+{
+  "company": "LG Electronics",
+  "position": "Full Stack Developer",
+  "dates": "July 2021 - Present",
+  "location": "Seoul, South Korea (On-site)",
+  "department": "MS Data/Cloud Development Team, Data Solution Part",
+  "responsibilities": "Working as Full Stack Developer and Data Scientist Developing AI Agent Chatbot Service for LG Business Cloud Developed LG Business Cloud Chatbot UI/UX. Team Development/Operational Administrator and Hardware Virtual Product Development In-House System Administrator",
+  "skills": [
+    {
+      "category": "Frontend Development",
+      "skills": [
+        "React.js",
+        "Svelte",
+        "HTML",
+        "CSS",
+        "TailwindCSS",
+        "TypeScript",
+        "Zustand"
+      ]
+    },
+    {
+      "category": "Backend Development",
+      "skills": [
+        "Node.js",
+        "FastAPI",
+        "Flask"
+      ]
+    },
+    {
+      "category": "Data & LLM",
+      "skills": [
+        "Python",
+        "Boto3",
+        "LangGraph",
+        "Pandas",
+        "Numpy",
+        "Selenium",
+        "MySQL",
+        "Elasticsearch",
+        "Kibana",
+        "Grafana",
+        "Airflow",
+        "Prometheus"
+      ]
+    },
+    {
+      "category": "Cloud",
+      "skills": [
+        "AWS",
+        "GCP",
+        "Cloudflare"
+      ]
+    }
+  ],
+  "career": [
+    {
+      "company": "LG Electronics",
+      "position": "Full Stack Developer",
+      "dates": "Jan 2025 - Present",
+      "duration": "1 year",
+      "location": "Seoul, South Korea",
+      "department": "MS Data/Cloud Development Team",
+      "responsibilities": [
+        "MS Data/Cloud Development Team, Data Solution Part",
+        "Working as Full Stack Developer & Data Scientist",
+        "Developed AI Agent Chatbot Service for LG Business Cloud",
+        "Developed LG Business Cloud Chatbot UI/UX",
+        "Developed Chatbot UI/UX for In-House System",
+        "Team Development/Operational Server Administrator",
+        "Hardware Virtual Product Development In-House System Administrator",
+        "Developing chatbot service for LG Electronics Information Display Marketing"
+      ]
+    },
+    {
+      "company": "LG Electronics",
+      "position": "Full Stack Developer",
+      "dates": "Jan 2024 - Dec 2024",
+      "duration": "1 year",
+      "location": "P'yŏngt'aeng-ni, Gyeonggi, South Korea (On-site)",
+      "department": "ID DX/Data Solution Team",
+      "responsibilities": [
+        "Working as Full Stack Developer and Data Scientist",
+        "Developed Usage Report using Large Language Model for Pro:Centric Cloud",
+        "Developed LLM and RAG based Chatbot for In-House System",
+        "Developed LG Business Cloud Chatbot",
+        "Developed Chatbot UI/UX for In-House System",
+        "Team Development/Operational Server Administrator",
+        "In-House VPD System Administrator",
+        "In-House Department System Administrator",
+        "Participated in Industry-Academia Project with Seoul National University of Science and Education"
+      ]
+    },
+    {
+      "company": "LG Electronics",
+      "position": "Full Stack Developer",
+      "dates": "May 2022 - Dec 2023",
+      "duration": "1 year 8 months",
+      "location": "P'yŏngt'aeng-ni, Gyeonggi, South Korea",
+      "department": "ID DX/VPD System Development Task Team",
+      "responsibilities": [
+        "Created In-House system for LED Outsourcing Team",
+        "Developed LG In-House VPD Management System",
+        "Team Development/Operation Server Maintenance Administrator",
+        "Developed CX System Dashboard in In-House System",
+        "ID In-House System Administrator"
+      ]
+    },
+    {
+      "company": "LG Electronics",
+      "position": "Data Scientist",
+      "dates": "Apr 2022 - Dec 2022",
+      "duration": "9 months",
+      "location": "Pyeongtaek, South Korea",
+      "department": "BS Solution Task Team",
+      "responsibilities": [
+        "Created BS ILO Process Quality Analysis Monitoring Automation System",
+        "Participated in Dashboard Development/Operation",
+        "ILO Data Collection Analysis and Preprocessing",
+        "Managed GCP VM (Ubuntu OS) Server",
+        "Development of common code for horizontal deployment of enterprise systems"
+      ]
+    },
+    {
+      "company": "LG Electronics",
+      "position": "Research and Development Engineer",
+      "dates": "Jul 2021 - Apr 2022",
+      "duration": "10 months",
+      "location": "Gyeonggi, South Korea",
+      "department": "ID Advanced Convergence Solution Project Team",
+      "responsibilities": [
+        "Embedded System Developer",
+        "Computer Vision and AI",
+        "Developed Gaze Tracking Mouse Control Service for KIOSK",
+        "Developed Hand Mouse System for KIOSK"
+      ]
+    }
+  ],
+  "about_me": [
+    {
+      "question": "Can you tell us about your background?",
+      "answer": "Sure! I've had quite an international upbringing. I started studying abroad from a young age, beginning in elementary school with 3 years in Canada followed by 9 years in America, which has greatly influenced my global perspective. I attended Penn State University Park, majoring in Applied Data Science. During my time at university, I discovered my passion for coding and realized its vast potential for innovation and problem-solving. I also worked as a teaching assistant in Elementary Statistics and Data Science classes, which enhanced my ability to communicate complex concepts. Alongside my studies, I gained practical experience through part-time jobs, including roles as a Barista, Server, and Security personnel, which developed my interpersonal and multitasking skills. After graduation, I immediately began working at LG Electronics, contributing to multiple projects detailed in my project section. Additionally, I conpleted ny servuce in the Korean military for 1 year and 9 months, an experience that instilled resilience and discipline."
+    },
+    {
+      "question": "Can you tell us a bit about your career path?",
+      "answer": "Absolutely! I've been working as a Full Stack Developer and Data Scientist, primarily with LG Electronics. My journey has involved creating AI chatbot services, designing interfaces for cloud solutions, and handling various server administration tasks."
+    },
+    {
+      "question": "What kind of skills do you bring to the table?",
+      "answer": "I’ve developed a pretty broad skill set over the years. I’m comfortable with full-stack development and have experience in languages like TypeScript, Python, and JavaScript. I also work with frameworks such as React.js and Node.js, and I enjoy diving into data with tools like MySQL, Elasticsearch, and Kibana. Beyond technical skills, I am highly adaptable and thrive in diverse environments, allowing me to quickly catch up and integrate with any team or project setup."
+    },
+    {
+      "question": "What drives you in your work?",
+      "answer": "Honestly, I love tackling tough problems and coming up with creative solutions. There’s something really rewarding about improving user experiences and seeing the tangible benefits of a successful project. It’s great to work with a team that’s at the cutting edge of technology and making a real difference."
+    },
+    {
+      "question": "What’s a career milestone you’re proud of?",
+      "answer": "A highlight for me was spearheading the development of an AI chatbot for LG's business cloud. It was a challenging project that involved integrating advanced language processing. Seeing how it streamlined processes and improved customer interaction was incredibly fulfilling."
+    }
+  ],
+  "projects": [
+    {
+      "name": "LG Business Cloud Chatbot Development",
+      "workDate": "2024-2025",
+      "techSkills": [
+        "Vite",
+        "React",
+        "HTML",
+        "CSS",
+        "TailwindCSS",
+        "TypeScript",
+        "AWS Bedrock",
+        "AWS Lambda",
+        "API Gateway",
+        "WebSocket",
+        "Jenkins"
+      ],
+      "explanation": "Developed a chatbot for LG Business Cloud with a focus on facilitating user access to information through a responsive and dynamic chat interface, integrating real-time communication and machine learning capabilities.",
+      "projectLink": "https://lgbusinesscloud.com/home/"
+    },
+    {
+      "name": "In-house LED Outsourcing Team System Development",
+      "workDate": "2023 - 2024",
+      "techSkills": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "FastAPI",
+        "Pandas",
+        "Numpy",
+        "GCP BigQuery",
+        "MariaDB",
+        "Elasticsearch",
+        "Kibana",
+        "Airflow",
+        "Docker"
+      ],
+      "explanation": "Led the development of a comprehensive business system for data management and analysis, including visualization and ETL, to support the LED outsourcing team, utilizing a wide array of data technologies.",
+      "projectLink": ""
+    },
+    {
+      "name": "In-house ILO Outsourcing Quality Monitoring System",
+      "workDate": "2022 - 2023",
+      "techSkills": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "TailwindCSS",
+        "FastAPI",
+        "Pandas",
+        "Numpy",
+        "GCP BigQuery",
+        "Airflow",
+        "SQL",
+        "Docker"
+      ],
+      "explanation": "Spearheaded the development of a system to extract data from various company systems, load it into GCP, and preprocess the data in BigQuery. Developed a monitoring solution to handle and resolve quality issues effectively.",
+      "projectLink": ""
+    }
+  ],
+  "contact": {
+    "email": "jkapa0417@gmail.com"
+  }
+}

@@ -14,8 +14,9 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
         backgroundPosition: 'center',
       }}
     >
-      <h1>Junki's Porfolio</h1>
+      <h1 className="font-bold text-black text-lg">Junki's Porfolio</h1>
       <HeaderButtonContainer />
+      { children }
     </div>
   );
 }
