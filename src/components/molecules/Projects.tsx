@@ -17,7 +17,7 @@ const Projects: React.FC<ProjectsProps> = ({ messages = [] }) => {
   return (
     <div className="flex flex-col">
       <SectionHeader title="Projects" />
-      <div className="flex gap-6 flex-wrap justify-center md:justify-start">
+      <div className="flex gap-6 flex-wrap justify-center sm:justify-start">
         {messages.map((item, index) => (
           <Card key={index}>
             <h2 className="text-2xl font-bold mb-2">{item.name}</h2>

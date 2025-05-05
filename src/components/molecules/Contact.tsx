@@ -11,7 +11,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ messages }) => {
   return (
-    <div className="flex flex-col items-center md:items-start">
+    <div className="flex flex-col items-center sm:items-start">
       <SectionHeader title="Contact" />
       <Card key={'contact'}>
         <div className="flex flex-col items-start">

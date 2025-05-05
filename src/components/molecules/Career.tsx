@@ -18,10 +18,10 @@ interface CareerProps {
 
 const Career: React.FC<CareerProps> = ({ messages }) => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col items-center sm:items-start'>
       <SectionHeader title="Careers" />
       <div className='flex flex-col '>
-        <div className="flex gap-4 flex-wrap justify-center md:justify-start">
+        <div className="flex gap-4 flex-wrap justify-center sm:justify-start">
           {messages?.map((item, index) => (
             <Card key={index}>
               <div className="flex flex-wrap text-black">

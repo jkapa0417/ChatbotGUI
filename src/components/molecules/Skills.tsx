@@ -50,7 +50,7 @@ const Skills: React.FC<SkillsProps> = ({ messages }) => {
   return (
     <div className="flex flex-col">
       <SectionHeader title="Skills" />
-      <div className="flex gap-6 flex-wrap justify-center md:justify-start">
+      <div className="flex gap-6 flex-wrap justify-center sm:justify-start">
         {messages?.map((msg, index) => (
           <Card key={index}>
             <div className="flex flex-col items-center text-center">

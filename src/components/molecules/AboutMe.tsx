@@ -13,9 +13,9 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ messages = [] }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center sm:items-start">
       <SectionHeader title="About Me" />
-      <div className="flex gap-4 flex-wrap justify-center md:justify-start">
+      <div className="flex gap-4 flex-wrap justify-center sm:justify-start">
         {messages.map((item, index) => (
           <Card key={index}>
             <h2 className="text-xl font-semibold mb-4">{item.question}</h2>

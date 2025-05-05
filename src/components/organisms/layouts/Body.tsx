@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import WelcomeMessageContainer from "../../molecules/WelcomeContainer";
+import NewWelcomeContainer from '../../molecules/NewWelcomeContainer';
 import AboutMe from "../../molecules/AboutMe";
 import Career from '../../molecules/Career';
 import Contact from '../../molecules/Contact';
 import Projects from '../../molecules/Projects';
 import Skills from '../../molecules/Skills';
 import Rules from '../../../json/info.json'
+import Modal from '../../atoms/Modal';
 import MessageContainer from '../../molecules/MessageContainer';
 import { useMessageStore, useUIStore } from "../../../stores/stores";
 import ClearButton from '../../atoms/ClearButton';
@@ -34,7 +35,7 @@ const Body: React.FC<BodyProps> = ({ children }) => {
         className="flex flex-col flex-1 w-full h-full text-black p-4 gap-4 overflow-y-auto bg-[#F4F4F5]"
       >
         <div className="flex gap-4 mt-4 w-full flex-wrap md:justify-start justify-center">
-          <WelcomeMessageContainer />
+          <NewWelcomeContainer />
         </div>
         <Career messages={Rules?.career || []} />
         <Projects messages={Rules?.projects || []} />
@@ -47,22 +48,15 @@ const Body: React.FC<BodyProps> = ({ children }) => {
         {children}
       </div>
       {modalOpen && (
-        <div className="fixed inset-0 backdrop-blur-md flex justify-center items-center z-50">
-          <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-2">
-            <img
-              className="w-full h-auto rounded-lg cursor-pointer"
-              src={ProfileImage}
-              alt="Profile of Jun Ki Ahn"
-              onClick={() => setModalOpen(false)}
-            />
-            <button
-              className="mt-2 px-4 py-2 bg-[#07B53B] text-white rounded-lg w-full cursor-pointer"
-              onClick={() => setModalOpen(false)}
-            >
-              Close
-            </button>
-          </div>
-        </div>
+        <Modal>
+          <img
+            className="w-full h-auto rounded-lg cursor-pointer"
+            src={ProfileImage}
+            alt="Profile of Jun Ki Ahn"
+            onClick={() => setModalOpen(false)}
+          />
+        </Modal>
+
       )}
     </>
   );
