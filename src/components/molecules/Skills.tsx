@@ -5,15 +5,10 @@ import LangGraph from "@assets/langgraph.svg";
 interface Skills {
   category: string;
   skills: string[];
-  svg?: React.ReactNode; // optional SVG icon for category
-}
-
-interface Message {
-  categories: Skills[];
 }
 
 interface SkillsProps {
-  messages?: Message[];
+  messages?: Skills[];
 }
 
 const skillIcons: { [skill: string]: string } = {
