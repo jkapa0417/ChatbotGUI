@@ -29,7 +29,9 @@ const Body: React.FC<BodyProps> = ({ children }) => {
   }
 
   useEffect(() => {
-    scrollToBottom();
+    if (messages?.length > 0) {
+      scrollToBottom();
+    }
   }, [messages]);
 
   return (
@@ -40,11 +42,11 @@ const Body: React.FC<BodyProps> = ({ children }) => {
         <div className="flex gap-4 mt-4 w-full flex-wrap md:justify-start justify-center">
           <NewWelcomeContainer />
         </div>
-        <Career messages={i18n.language ==='ko' ? RulesKorean?.career || [] : RulesEnglish?.career || []} />
-        <Projects messages={i18n.language ==='ko' ? RulesKorean?.projects || [] : RulesEnglish?.projects || []} />
-        <Skills messages={i18n.language ==='ko' ? RulesKorean?.skills || [] : RulesEnglish?.skills || []} />
-        <AboutMe messages={i18n.language ==='ko' ? RulesKorean?.about_me || [] : RulesEnglish?.about_me || []} />
-        <Contact messages={i18n.language ==='ko' ? RulesKorean?.contact || [] : RulesEnglish?.contact || []} />
+        <Career messages={i18n.language === 'ko' ? RulesKorean?.career || [] : RulesEnglish?.career || []} />
+        <Projects messages={i18n.language === 'ko' ? RulesKorean?.projects || [] : RulesEnglish?.projects || []} />
+        <Skills messages={i18n.language === 'ko' ? RulesKorean?.skills || [] : RulesEnglish?.skills || []} />
+        <AboutMe messages={i18n.language === 'ko' ? RulesKorean?.about_me || [] : RulesEnglish?.about_me || []} />
+        <Contact messages={i18n.language === 'ko' ? RulesKorean?.contact || [] : RulesEnglish?.contact || []} />
         <MessageContainer />
         {messages?.length > 0 && !loading && <ClearButton onClick={clearMessages} />}
         <div ref={messagesEndRef} />
