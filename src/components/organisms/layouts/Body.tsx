@@ -7,6 +7,7 @@ import Corkboard from "@assets/corkboard.jpg";
 import Projects from '../../molecules/Projects';
 import Skills from '../../molecules/Skills';
 import Rules from '../../../json/info.json'
+import MessageContainer from '../../molecules/MessageContainer';
 import { useMessageStore } from "../../../stores/stores";
 import ClearButton from '../../atoms/ClearButton';
 
@@ -27,20 +28,22 @@ const Body: React.FC<BodyProps> = ({ children }) => {
   }, [messages]);
 
   const handleClick = (id: number, type: 'user' | 'bot' | 'button'): void => {
+    const timestamp = Date.now().toString()
+    const mid = timestamp + type + id
     if (id === 0 || id === 5) {
-      addMessage(<AboutMe messages={Rules?.about_me || []} />, type);
+      addMessage(mid, <AboutMe messages={Rules?.about_me || []} />, type);
     }
     if (id === 1 || id === 5) {
-      addMessage(<Career messages={Rules?.career || []} />, type);
+      addMessage(mid, <Career messages={Rules?.career || []} />, type);
     }
     if (id === 2 || id === 5) {
-      addMessage(<Projects messages={Rules?.projects || []} />, type);
+      addMessage(mid, <Projects messages={Rules?.projects || []} />, type);
     }
     if (id === 3 || id === 5) {
-      addMessage(<Skills messages={Rules?.skills || []} />, type);
+      addMessage(mid, <Skills messages={Rules?.skills || []} />, type);
     }
     if (id === 4 || id === 5) {
-      addMessage(<Contact messages={Rules?.contact || []} />, type);
+      addMessage(mid, <Contact messages={Rules?.contact || []} />, type);
     }
   };
 
@@ -78,14 +81,7 @@ const Body: React.FC<BodyProps> = ({ children }) => {
           );
         })}
       </div>
-      {messages.map((message, index) => (
-        <div key={index} className={`message ${message?.types}`}>
-          {React.isValidElement(message.content)
-            ? React.cloneElement(message.content, { key: index })
-            : message.content
-          }
-        </div>
-      ))}
+      <MessageContainer />
       <div ref={messagesEndRef} />
       {messages?.length > 0 && <ClearButton onClick={clearMessages} />}
       {children}

@@ -1,11 +1,10 @@
 interface IconButtonProps {
-  onClick?: () => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   ariaLabel?: string;
   className?: string;
   children?: React.ReactNode;
 }
 
-// Example SVG for LinkedIn icon
 const IconButton: React.FC<IconButtonProps> = ({ onClick, ariaLabel = '', className, children }) => {
   return (
     <button

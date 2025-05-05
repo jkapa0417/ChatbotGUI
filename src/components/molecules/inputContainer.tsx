@@ -1,16 +1,20 @@
 import Input from "../atoms/Input";
-import IconButton from "../atoms/IconButton";
-import SendIcon from "@assets/send.svg?react";
+import { useMessageStore } from "../../stores/stores";
 
-interface InputContainerProps {}
+
+interface InputContainerProps { }
 
 const InputContainer: React.FC<InputContainerProps> = () => {
+  const { sendMessage, stopMessage, loading } = useMessageStore()
+
   return (
     <div className="flex w-full h-full items-center">
-      <Input placeholder="LLM Feature Coming Soon!" onSend={() => {/* provide your function here if needed */}} />
-      <IconButton className="flex w-fit h-fit items-center justify-center rounded-md mr-2 cursor-pointer">
-        <SendIcon className="w-6 h-6"/>
-      </IconButton>
+      <Input
+        placeholder="Ask about me! (ex: Explain about him)"
+        loading={loading}
+        onSend={sendMessage}
+        onStop={stopMessage}
+      />
     </div>
   );
 };
