@@ -1,5 +1,6 @@
 import Card from '../atoms/Card';
 import SectionHeader from '../atoms/SectionHeader';
+import { useTranslation } from 'react-i18next';
 
 
 interface Message {
@@ -17,9 +18,10 @@ interface CareerProps {
 }
 
 const Career: React.FC<CareerProps> = ({ messages }) => {
+  const { t } = useTranslation();
   return (
     <div className='flex flex-col items-center sm:items-start'>
-      <SectionHeader title="Careers" />
+      <SectionHeader title={t('careers')} />
       <div className='flex flex-col '>
         <div className="flex gap-4 flex-wrap justify-center sm:justify-start">
           {messages?.map((item, index) => (

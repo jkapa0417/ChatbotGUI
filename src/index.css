@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: 'Ubuntu', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans KR','Ubuntu', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -21,6 +21,50 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.noto-sans-kr-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+.noto-sans-kr-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.noto-sans-kr-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+.noto-sans-kr-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.noto-sans-kr-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.noto-sans-kr-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.noto-sans-kr-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.noto-sans-kr-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .ubuntu-light {
