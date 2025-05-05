@@ -21,7 +21,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ messages = [] }) => {
             <h2 className="text-xl font-semibold mb-4 text-gray-800 pl-12">{item.question}</h2>
             <p
               className="text-gray-600 pl-12"
-              style={{ fontFamily: 'Handlee, cursive' }}
             >
               {item.answer}
             </p>

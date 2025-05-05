@@ -1,5 +1,6 @@
 import HeaderButtonContainer from "../../molecules/HeaderButtonContainer";
 import Wooden from "@assets/wooden.png"
+import MainIcon from "@assets/favicon.svg?react"
 
 interface HeaderProps {
   children?: React.ReactNode;
@@ -14,7 +15,10 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
         backgroundPosition: 'center',
       }}
     >
-      <h1 className="font-bold text-black text-lg">Junki's Porfolio</h1>
+      <div className="flex items-center gap-4">
+        <MainIcon className="h-10 w-10"/>
+        <h1 className="font-bold text-black text-lg">Junki's Portfolio</h1>
+      </div>
       <HeaderButtonContainer />
       { children }
     </div>

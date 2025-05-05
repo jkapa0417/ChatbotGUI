@@ -1,7 +1,7 @@
 import { Header, Body, Footer } from "../organisms"
 const MainLayout = ({ }) => {
   return (
-    <div className="flex flex-col min-h-screen h-screen">
+    <div className="flex flex-col h-screen">
       <Header/>
       <Body/>
       <Footer/>
