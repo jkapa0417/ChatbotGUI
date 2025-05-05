@@ -11,7 +11,7 @@ const IconButton: React.FC<IconButtonProps> = ({ onClick, ariaLabel = '', classN
     <button
       onClick={onClick}
       aria-label={ariaLabel}
-      className={`p-2 hover:bg-gray-200 transition ${className}`}
+      className={`p-2 hover:bg-gray-200 transition ${className} cursor-pointer`}
     >
       {children}
     </button>
