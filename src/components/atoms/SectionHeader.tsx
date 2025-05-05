@@ -7,7 +7,7 @@ interface SectionHeaderProps {
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
   const { setModalOpen } = useUIStore()
   return (
-    <div className='flex gap-4 mt-4 mb-8 justify-center sm:justify-start w-full'>
+    <div className='flex gap-4 mt-4 mb-8 justify-center sm:justify-start items-center w-full'>
       <img
         className="hidden sm:flex rounded-full w-16 h-16 border-4 border-[#07B53B] cursor-pointer"
         src={ProfileImage}
