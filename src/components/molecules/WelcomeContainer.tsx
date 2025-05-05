@@ -4,6 +4,7 @@ import CodeIcon from "@assets/code.svg?react";
 import CloudIcon from "@assets/cloud.svg?react";
 import ChatIcon from "@assets/chat.svg?react";
 
+/*Deprecated*/
 const WelcomeMessageContainer = () => {
   const { setModalOpen } = useUIStore();
 
@@ -26,8 +27,6 @@ const WelcomeMessageContainer = () => {
             <h2 className="text-md sm:text-lg italic">Full Stack Developer</h2>
             <h3 className="text-sm sm:text-md">LG Electronics</h3>
           </div>
-
-
           <p className='text-base sm:text-lg'>
             Hello, my name is Jun Ki Ahn, a full stack developer working in LG Electronics
           </p>
