@@ -19,6 +19,16 @@ interface MessageStore {
   readerStore: { [key: string]: ReadableStreamDefaultReader };
 }
 
+interface UIStore {
+  modalOpen: boolean;
+  setModalOpen: (modalOpen: boolean) => void;
+}
+
+export const useUIStore = create<UIStore>((set) => ({
+  modalOpen: false,
+  setModalOpen: (modalOpen) => set({ modalOpen }),
+}))
+
 export const useMessageStore = create<MessageStore>((set, get) => ({
   messages: [],
   loading: false,
@@ -56,11 +66,11 @@ export const useMessageStore = create<MessageStore>((set, get) => ({
     get().addMessage(`${timestamp}-user`, input, 'user');
     get().addMessage(`${timestamp}-bot`, 'loading', 'bot');
     get().setLoading(true);
-
+    
     const chatMessages = [
       { role: 'user', content: input }
     ];
-
+  
     try {
       const response = await fetch(url, {
         method: 'POST',
@@ -152,5 +162,3 @@ export const useMessageStore = create<MessageStore>((set, get) => ({
     get().setLoading(false);
   },
 }));
-
-export default useMessageStore;

@@ -1,5 +1,4 @@
 import InputContainer from "../../molecules/inputContainer";
-import Wooden from "@assets/wooden.png"
 
 interface FooterProps {
   children?: React.ReactNode;
@@ -7,12 +6,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ children }) => {
   return (
-    <div className="w-full"
-      style={{
-        backgroundImage: `url(${Wooden})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+    <div className="w-full bg-[#07B53B]"
     >
       <InputContainer />
       {children}

@@ -48,13 +48,13 @@ const skillIcons: { [skill: string]: string } = {
 
 const Skills: React.FC<SkillsProps> = ({ messages }) => {
   return (
-    <div className="flex flex-col p-4">
+    <div className="flex flex-col">
       <SectionHeader title="Skills" />
       <div className="flex gap-6 flex-wrap justify-center md:justify-start">
         {messages?.map((msg, index) => (
           <Card key={index}>
-            <div className="flex flex-col items-center text-center pl-12">
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">{msg?.category}</h3>
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-xl font-semibold mb-3">{msg?.category}</h3>
               <ul className="grid grid-cols-2 lg:grid-cols-3 gap-4 list-disc list-inside">
                 {msg?.skills.map((skill, skillIndex) => (
                   <li key={skillIndex} className="flex flex-col items-center p-2">

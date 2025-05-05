@@ -3,20 +3,21 @@ import WelcomeMessageContainer from "../../molecules/WelcomeContainer";
 import AboutMe from "../../molecules/AboutMe";
 import Career from '../../molecules/Career';
 import Contact from '../../molecules/Contact';
-import Corkboard from "@assets/corkboard.jpg";
 import Projects from '../../molecules/Projects';
 import Skills from '../../molecules/Skills';
 import Rules from '../../../json/info.json'
 import MessageContainer from '../../molecules/MessageContainer';
-import { useMessageStore } from "../../../stores/stores";
+import { useMessageStore, useUIStore } from "../../../stores/stores";
 import ClearButton from '../../atoms/ClearButton';
+import ProfileImage from "@assets/profile_image.jpg";
 
 interface BodyProps {
   children?: React.ReactNode;
 }
 
 const Body: React.FC<BodyProps> = ({ children }) => {
-  const { messages, addMessage, clearMessages, loading } = useMessageStore()
+  const { messages, clearMessages, loading } = useMessageStore()
+  const { modalOpen, setModalOpen } = useUIStore();
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -27,65 +28,43 @@ const Body: React.FC<BodyProps> = ({ children }) => {
     scrollToBottom();
   }, [messages]);
 
-  const handleClick = (id: number, type: 'user' | 'bot' | 'button'): void => {
-    const timestamp = Date.now().toString()
-    const mid = timestamp + type + id
-    if (id === 0 || id === 5) {
-      addMessage(mid, <AboutMe messages={Rules?.about_me || []} />, type);
-    }
-    if (id === 1 || id === 5) {
-      addMessage(mid, <Career messages={Rules?.career || []} />, type);
-    }
-    if (id === 2 || id === 5) {
-      addMessage(mid, <Projects messages={Rules?.projects || []} />, type);
-    }
-    if (id === 3 || id === 5) {
-      addMessage(mid, <Skills messages={Rules?.skills || []} />, type);
-    }
-    if (id === 4 || id === 5) {
-      addMessage(mid, <Contact messages={Rules?.contact || []} />, type);
-    }
-  };
-
   return (
-    <div
-      className="flex flex-col flex-1 w-full h-full text-black p-4 gap-4 overflow-y-auto"
-      style={{
-        backgroundImage: `url(${Corkboard})`,
-        backgroundSize: 'auto',
-        backgroundPosition: 'center',
-        boxShadow: 'inset 0 0 20px rgba(0, 0, 0, 5)',
-      }}
-    >
-      <div className="flex gap-4 mt-4 w-full flex-wrap md:justify-start justify-center">
-        <WelcomeMessageContainer />
+    <>
+      <div
+        className="flex flex-col flex-1 w-full h-full text-black p-4 gap-4 overflow-y-auto bg-[#F4F4F5]"
+      >
+        <div className="flex gap-4 mt-4 w-full flex-wrap md:justify-start justify-center">
+          <WelcomeMessageContainer />
+        </div>
+        <Career messages={Rules?.career || []} />
+        <Projects messages={Rules?.projects || []} />
+        <Skills messages={Rules?.skills || []} />
+        <AboutMe messages={Rules?.about_me || []} />
+        <Contact messages={Rules?.contact || []} />
+        <MessageContainer />
+        {messages?.length > 0 && !loading && <ClearButton onClick={clearMessages} />}
+        <div ref={messagesEndRef} />
+        {children}
       </div>
-      <div className="flex gap-4 mt-4 w-full flex-wrap md:justify-start justify-center">
-        {['About Me', 'Career', 'Projects', 'Skills', 'Contact', 'Show All Content!'].map((label, index) => {
-          const colors = ['#FFFF99', '#FF99CC', '#CC99FF', '#99CCFF', '#C9D5F6', '#b6d7a8'];
-          const rotations = ['rotate-4', '-rotate-4', 'rotate-2', '-rotate-2', 'rotate-3', '-rotate-3'];
-          return (
+      {modalOpen && (
+        <div className="fixed inset-0 backdrop-blur-md flex justify-center items-center z-50">
+          <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-2">
+            <img
+              className="w-full h-auto rounded-lg cursor-pointer"
+              src={ProfileImage}
+              alt="Profile of Jun Ki Ahn"
+              onClick={() => setModalOpen(false)}
+            />
             <button
-              key={index}
-              className={`flex w-[100px] h-[100px] sm:w-[180px] sm:h-[180px] items-center justify-center text-black font-medium transform shadow-xl hover:shadow-2xl overflow-hidden ${rotations[index % rotations.length]} hover:scale-120 hover:tracking-wide cursor-pointer`}
-              style={{
-                backgroundColor: colors[index % colors.length],
-                backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent)',
-                backgroundSize: '4px 4px',
-              }}
-              onClick={() => handleClick(index, 'button')}
+              className="mt-2 px-4 py-2 bg-[#07B53B] text-white rounded-lg w-full cursor-pointer"
+              onClick={() => setModalOpen(false)}
             >
-              <div className="absolute bottom-0 left-0 w-3 h-3 bg-black opacity-20 transform skew-x-12"></div>
-              {label}
+              Close
             </button>
-          );
-        })}
-      </div>
-      <MessageContainer />
-      {messages?.length > 0 && !loading && <ClearButton onClick={clearMessages} />}
-      <div ref={messagesEndRef} />
-      {children}
-    </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

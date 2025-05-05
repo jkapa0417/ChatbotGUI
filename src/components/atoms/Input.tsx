@@ -96,7 +96,7 @@ const Input: React.FC<ChatTextareaProps> = ({ placeholder = "Type your message..
       >
         <textarea
           ref={textareaRef}
-          className="flex-1 p-2 border rounded resize-none focus:outline-none bg-white border-2 border-black text-black"
+          className="flex-1 px-8 py-2 rounded-[32px] resize-none focus:outline-none bg-white text-black"
           placeholder={placeholder}
           value={message}
           onChange={handleChange}
@@ -109,10 +109,10 @@ const Input: React.FC<ChatTextareaProps> = ({ placeholder = "Type your message..
         />
       </form>
       <IconButton
-        className="flex w-fit h-fit items-center justify-center rounded-md mr-2 cursor-pointer"
+        className="flex w-fit h-fit items-center justify-center rounded-full mr-1 cursor-pointer group hover:!bg-[#8BE78B]"
         onClick={!loading ? handleClick : handleStop}
       >
-        {!loading ? <SendIcon className="w-6 h-6" /> : <StopIcon className='w-6 h-6' />}
+        {!loading ? <SendIcon className="w-10 h-10 stroke-[#FFFFFF] group-hover:stroke-[#000000]" /> : <StopIcon className='w-10 h-10 fill-[#FFFFFF] group-hover:fill-[#000000]' />}
       </IconButton>
     </div>
   );

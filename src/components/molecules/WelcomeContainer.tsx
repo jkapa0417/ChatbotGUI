@@ -1,74 +1,53 @@
-import {useState} from 'react'
+import { useUIStore } from "../../stores/stores";
 import ProfileImage from "@assets/profile_image.jpg";
 import CodeIcon from "@assets/code.svg?react";
 import CloudIcon from "@assets/cloud.svg?react";
 import ChatIcon from "@assets/chat.svg?react";
 
 const WelcomeMessageContainer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { setModalOpen } = useUIStore();
 
   return (
-    <div
-      className={`relative max-w-lg h-fit w-fit p-8 bg-white shadow-2xl rounded-lg border-t-4 border-gray-300`}
-      style={{
-        backgroundImage: 'url("https://www.transparenttextures.com/patterns/white-diamond.png")', // Subtle texture indicating a whiteboard
-        backgroundSize: 'cover',
-        borderRadius: '10px',
-      }}
-    >
-      <div className={`flex flex-col h-full`}>
-        <div className="flex items-center space-x-4 mb-4 border-b pb-4">
-          <img
-            className="rounded-full w-20 h-20 border-4 border-gray-400 cursor-pointer"
-            src={ProfileImage}
-            alt="Profile of Jun Ki Ahn"
-            onClick={() => setIsModalOpen(true)}
-          />
+    <div className='flex gap-4'>
+      <img
+        className="rounded-full w-20 h-20 border-4 border-[#07B53B] cursor-pointer"
+        src={ProfileImage}
+        alt="Profile of Jun Ki Ahn"
+        onClick={() => setModalOpen(true)}
+      />
+
+      <div
+        className={`relative max-w-lg h-fit w-fit p-8 bg-white shadow-lg rounded-br-lg rounded-tl-none rounded-tr-lg rounded-bl-lg`}
+      >
+        <div className={`flex flex-col h-full gap-4`}>
+
           <div>
-            <h1 className="text-lg sm:text-2xl font-extrabold text-gray-800">Jun Ki Ahn</h1>
-            <h2 className="text-md sm:text-lg text-gray-700 italic">Full Stack Developer</h2>
-            <h3 className="text-sm sm:text-md text-gray-600">LG Electronics</h3>
+            <h1 className="text-lg sm:text-2xl font-extrabold">Jun Ki Ahn</h1>
+            <h2 className="text-md sm:text-lg italic">Full Stack Developer</h2>
+            <h3 className="text-sm sm:text-md">LG Electronics</h3>
           </div>
-        </div>
-        <div className="mt-4 text-gray-700 space-y-3 border-b pb-4">
-          <p className='text-sm sm:text-base'>
+
+
+          <p className='text-base sm:text-lg'>
+            Hello, my name is Jun Ki Ahn, a full stack developer working in LG Electronics
+          </p>
+          <p className='text-base sm:text-lg'>
             Leveraging skills in React, NodeJS, and Python, I craft efficient, scalable applications that power LG Electronics.
           </p>
-          <p className='text-sm sm:text-base'>
+          <p className='text-base sm:text-lg'>
             Instrumental in designing the LG Business Cloud Chatbot, I advance user interaction through innovation in communication systems.
           </p>
-          <p className='text-sm sm:text-base'>
+          <p className='text-base sm:text-lg'>
             Driven by a passion for technology, I am committed to delivering high-quality, impactful user experiences.
           </p>
-          <p className='text-sm sm:text-base'>
-            Curious to know more? Click the question mark next to my profile or type your queries in the input box below.
-          </p>
-        </div>
-        <div className="flex justify-start space-x-4 mt-4">
-          <CodeIcon className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" title="Coding" />
-          <CloudIcon className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-500" title="Cloud Solutions" />
-          <ChatIcon className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" title="Chatbot Development" />
-        </div>
-      </div>
 
-      {isModalOpen && (
-        <div className="fixed inset-0 backdrop-blur-md flex justify-center items-center z-50">
-          <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-2">
-            <img
-              className="w-full h-auto rounded-lg cursor-pointer"
-              src={ProfileImage}
-              alt="Profile of Jun Ki Ahn"
-              onClick={() => setIsModalOpen(false)}
-            />
-            <button
-              className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg w-full"
-              onClick={() => setIsModalOpen(false)}
-            >
-              Close
-            </button>
+          <div className="flex justify-start space-x-4 mt-4">
+            <CodeIcon className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" title="Coding" />
+            <CloudIcon className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-500" title="Cloud Solutions" />
+            <ChatIcon className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" title="Chatbot Development" />
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
