@@ -16,7 +16,7 @@ interface BodyProps {
 }
 
 const Body: React.FC<BodyProps> = ({ children }) => {
-  const { messages, addMessage, clearMessages } = useMessageStore()
+  const { messages, addMessage, clearMessages, loading } = useMessageStore()
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -82,8 +82,8 @@ const Body: React.FC<BodyProps> = ({ children }) => {
         })}
       </div>
       <MessageContainer />
+      {messages?.length > 0 && !loading && <ClearButton onClick={clearMessages} />}
       <div ref={messagesEndRef} />
-      {messages?.length > 0 && <ClearButton onClick={clearMessages} />}
       {children}
     </div>
   );
