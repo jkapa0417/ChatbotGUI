@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../atoms/Card';
 import SectionHeader from '../atoms/SectionHeader';
+import { useTranslation } from 'react-i18next';
 
 interface Message {
   question: string;
@@ -12,9 +13,10 @@ interface AboutMeProps {
 }
 
 const AboutMe: React.FC<AboutMeProps> = ({ messages = [] }) => {
+  const { t } = useTranslation()
   return (
     <div className="flex flex-col items-center sm:items-start">
-      <SectionHeader title="About Me" />
+      <SectionHeader title={t('about_me')} />
       <div className="flex gap-4 flex-wrap justify-center sm:justify-start">
         {messages.map((item, index) => (
           <Card key={index}>

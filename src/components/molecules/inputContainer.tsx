@@ -1,16 +1,18 @@
 import Input from "../atoms/Input";
 import { useMessageStore } from "../../stores/stores";
+import { useTranslation } from "react-i18next";
 
 
 interface InputContainerProps { }
 
 const InputContainer: React.FC<InputContainerProps> = () => {
   const { sendMessage, stopMessage, loading } = useMessageStore()
+  const { t } = useTranslation()
 
   return (
     <div className="flex w-full h-full items-center">
       <Input
-        placeholder="Ask about me! (ex: Explain about him)"
+        placeholder={t('placeholder')}
         loading={loading}
         onSend={sendMessage}
         onStop={stopMessage}

@@ -1,6 +1,7 @@
 import Card from '../atoms/Card';
 import SectionHeader from '../atoms/SectionHeader';
 import LangGraph from "@assets/langgraph.svg";
+import { useTranslation } from 'react-i18next';
 
 interface Skills {
   category: string;
@@ -47,9 +48,10 @@ const skillIcons: { [skill: string]: string } = {
 };
 
 const Skills: React.FC<SkillsProps> = ({ messages }) => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col">
-      <SectionHeader title="Skills" />
+      <SectionHeader title={t('skills')} />
       <div className="flex gap-6 flex-wrap justify-center sm:justify-start">
         {messages?.map((msg, index) => (
           <Card key={index}>
