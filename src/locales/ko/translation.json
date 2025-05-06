@@ -1,6 +1,7 @@
 {
   "header_title": "안준기의 포트폴리오",
-  "intro_prefix": "안녕하세요, 풀스택 개발자",
+  "intro_prefix": "안녕하세요,",
+  "intro_ko": "풀스택 개발자",
   "name": "안준기",
   "intro_suffix": "입니다.",
   "sub_prefix": "",
@@ -8,7 +9,7 @@
   "subintro_prefix":"",
   "tech_stack": "React, FastAPI, AWS, Cloudflare",
   "subintro_suffix":"등 다양한 기술 스택을 사용하여 프론트엔드, 백엔드, 클라우드와 데이터를 모두 아우르는 개발을 진행하고 있습니다.",
-  "conclusion": "최고의 기술력과 열정을 바탕으로 함께 성장하고 발전할 수 있는 프로젝트를 찾고 있습니다",
+  "conclusion": "최고의 기술력과 열정을 바탕으로 함께 성장하고 발전할 수 있는 프로젝트를 찾고 있습니다.",
   "view_project": "프로젝트 보기",
   "no_demo": "사내 규정 인해 프로젝트 공유를 할 수 없었습니다.",
   "contact": "늘 소통하는 걸 좋아합니다! 협업이나 구인, 또는 간단한 프로젝트 이야기까지 언제든 이메일로 편하게 연락 주세요.",

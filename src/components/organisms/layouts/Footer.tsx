@@ -6,7 +6,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ children }) => {
   return (
-    <div className="w-full bg-[#07B53B]"
+    <div className="w-full bg-[#609966]"
     >
       <InputContainer />
       {children}
