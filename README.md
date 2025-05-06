@@ -1,4 +1,4 @@
-# Portfolio ReadMe
+# Portfolio
 
 Welcome to my portfolio website! This project is a personal showcase designed to highlight my skills, projects, and professional journey. Below you'll find an overview of the key aspects that make up the website.
 
@@ -41,6 +41,7 @@ The website is deployed using Cloudflare Pages with Cloudflare Workers, ensuring
 - **Code Refactoring:** Improve code structure for better maintainability and scalability.  
 - **Enhanced LLM Functionality:** Incorporate system prompts to optimize LLM responses.  
 - **AutoRAG Integration:** Planning to use AutoRAG with Cloudflare R2 for automated file management, though associated costs are a consideration.
+- **Theme Customization:** Plan to label all color tones as variables to enable theme customization through user selection, allowing users to change the theme according to their preferences.
 
 *Note:* While I’d like to use AutoRAG with Cloudflare, it involves costs due to storage via R2.
 
