@@ -52,7 +52,7 @@ const Projects: React.FC<ProjectsProps> = ({ messages = [] }) => {
                 {item?.techSkills?.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="bg-[#07B53B] text-white hover:bg-white hover:text-black transition duration-300 px-2 py-1 rounded-full text-sm hover:scale-110 cursor-default"
+                    className="bg-[#67AE6E] text-white hover:bg-white hover:text-black transition duration-300 px-2 py-1 rounded-full text-sm hover:scale-110 cursor-default"
                   >
                     {skill}
                   </span>
@@ -63,7 +63,7 @@ const Projects: React.FC<ProjectsProps> = ({ messages = [] }) => {
               {item?.projectLink !== "" ? (
                 <a
                   href={item.projectLink}
-                  className="inline-block font-bold py-2 px-4 rounded bg-white text-black transition duration-300 hover:bg-[#07B53B] hover:text-white transform hover:scale-105"
+                  className="inline-block font-bold py-2 px-4 rounded bg-white text-black transition duration-300 hover:bg-[#67AE6E] hover:text-white transform hover:scale-105"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

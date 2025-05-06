@@ -14,12 +14,12 @@ const Message: React.FC<MessageProps> = ({ id, userType, children }) => {
   return (
     <div className={`flex w-full ${userType === 'user' ? 'justify-end' : 'justify-start'} items-center`}>
       {userType === 'bot' &&
-        <div className="flex rounded-full w-20 h-20 border-4 border-[#07B53B] bg-white justify-center items-center mr-2" >
+        <div className="flex rounded-full w-16 h-16 border-4 border-[#90C67C] justify-center items-center mr-2" >
           <AIIcon className="w-10 h-10" />
         </div>}
       <div
         key={id}
-        className={`relative ${userType === 'user' ? 'bg-[#79E278]' : 'bg-[#FFFFFF]'} shadow-md py-2 px-4 m-2 overflow-hidden max-w-[90%] break-word whitespace-pre-wrap ${borderRadiusClass}`}
+        className={`relative ${userType === 'user' ? 'bg-[#90C67C]' : 'bg-[#E1EEBC]'} shadow-md py-2 px-4 m-2 overflow-hidden max-w-[90%] break-word whitespace-pre-wrap ${borderRadiusClass}`}
       >
         <div className="relative z-10 text-sm sm:text-base">
           {children}
