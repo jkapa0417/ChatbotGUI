@@ -21,7 +21,7 @@ I implemented the Atomic Design methodology, structuring the project repository 
 ## AI & LLM Integration
 
 I’ve integrated a Large Language Model (LLM) feature to enhance user interaction:
-- **Model:** Mistral-7B-Instruct-v0.2  
+- **Model:** Qwen1.5-7b-Chat  
 - **Hosting:** Deployed via Cloudflare Worker AI.
 
 A dedicated UI for LLM messages has been added to enable seamless user interaction with the chatbot.
