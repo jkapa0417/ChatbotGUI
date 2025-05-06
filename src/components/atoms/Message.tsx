@@ -12,9 +12,9 @@ const Message: React.FC<MessageProps> = ({ id, userType, children }) => {
     : 'rounded-br-lg rounded-tl-none rounded-tr-lg rounded-bl-lg';
 
   return (
-    <div className={`flex w-full ${userType === 'user' ? 'justify-end' : 'justify-start'} items-center`}>
+    <div className={`flex w-full ${userType === 'user' ? 'justify-end' : 'justify-start'} items-start`}>
       {userType === 'bot' &&
-        <div className="flex rounded-full w-16 h-16 border-4 border-[#90C67C] justify-center items-center mr-2" >
+        <div className="flex rounded-full w-16 h-16 border-4 border-[#90C67C] justify-center items-center mr-2 mt-2" >
           <AIIcon className="w-10 h-10" />
         </div>}
       <div
